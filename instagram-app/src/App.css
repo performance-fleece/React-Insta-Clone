@@ -1,9 +1,42 @@
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 945px;
+  border-bottom: 1px solid lightgrey;
+  padding-right: 20px
+}
+
+.logo-left img {
+  width: 215px;
+}
+
+.search-bar input {
+  width: 215px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  padding: 5px 0 5px 0;
+}
+
+.icon-bar {
+  display: flex;
+  align-items: center;
+}
+
+.icon-bar img {
+  width: 25px;
+  margin-left: 30px;
+}
+
+
 .post-container {
   margin: 20px 0px 20px 20px;
   width: 610px;
   display: flex;
   flex-direction: column;
-  border: 2px solid darkgrey;
+  border: 2px solid lightgrey;
 }
 
 .post-header {
