@@ -1,15 +1,21 @@
 .post-container {
-  margin-left: 20px;
+  margin: 20px 0px 20px 20px;
+  width: 610px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid darkgrey;
 }
 
 .post-header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 618px;
   padding-left: 20px;
-  border: 1px solid darkgrey;
 
+}
+
+.post-img {
+  width: 100%;
 }
 
 .img-thumb {
@@ -17,9 +23,6 @@
   width: 30px;
 }
 
-.comment-container {
-  border: 1px solid darkgrey;
-}
 
 .comment-wrapper {
   display: flex;
