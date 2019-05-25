@@ -13,7 +13,8 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    this.setState({ posts: dummyData })
+    console.log(dummyData);
+    this.setState({ posts: dummyData });
   }
 
   render() {
