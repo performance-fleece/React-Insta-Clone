@@ -10,6 +10,7 @@ const PostContainer = props => {
             </div>
             <img className='post-image' alt= '' src={props.posts.imageUrl}></img>
             <div className='comment-container'>
+                <p className="comment-likes">{props.posts.likes} likes</p>
                 {props.posts.comments.map(comments => (
                     <CommentSection
                         key={comments.id}    

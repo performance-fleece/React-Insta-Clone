@@ -21,9 +21,9 @@ const SearchBar = props => {
           </form>
         </div>
         <div className="icon-bar">
-          <img alt='icon1' src={iconA} />
-          <img alt='icon2' src={iconB} />
-          <img alt='icon3' src={iconC} />
+          <img alt='iconA' src={iconA} />
+          <img alt='iconB' src={iconB} />
+          <img alt='iconC' src={iconC} />
 
         </div>
       </div>

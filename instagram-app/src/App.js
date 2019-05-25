@@ -4,15 +4,16 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
 
-const defaultState = {
-  posts: dummyData
-}
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = defaultState;
+    this.state = [];
     // console.log(this.state.posts)
+  }
+
+  componentDidMount () {
+    this.setState({ posts: dummyData })
   }
 
   render() {
