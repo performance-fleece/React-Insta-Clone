@@ -3,6 +3,7 @@ import logo from './ig_search_bar_logo.png'
 import iconA from './iconA.png';
 import iconB from './iconB.png';
 import iconC from './iconC.png';
+import './SearchBar.css';
 
 const SearchBar = props => {
     return (
