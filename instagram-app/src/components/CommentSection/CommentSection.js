@@ -1,13 +1,38 @@
-import React from 'react'
-import './CommentSection.css';
+import React from "react";
+import Comment from "./Comment";
+import CommentForm from "./CommentForm";
+import "./CommentSection.css";
 
-const CommentSection = props => {
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments,
+      comment: ""
+    };
+  }
+
+  changeHandler = event => {
+      this.setState({ [event.target.name]: event.target.value });
+  };
+
+  addComment = event => {
+      event.preventDefault();
+      let newComment = {
+          
+      }
+  }
+
+  render() {
     return (
-        <div className="comment-wrapper">
-            <p className="comment-user">{props.comments.username}</p>
-            <p className="comment-text">{props.comments.text}</p>
-        </div>
-    )
+      <div className="comment-wrapper">
+        {this.props.comments.map(comment => (
+          <Comment username={comment.username} text={comment.text} />
+        ))}
+        <CommentForm changeHandler={this.changeHandler} />
+      </div>
+    );
+  }
 }
 
 export default CommentSection;

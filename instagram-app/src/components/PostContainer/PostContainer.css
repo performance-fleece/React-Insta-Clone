@@ -1,22 +1,49 @@
-.comment-icon {
-    margin: 10px 15px 0 0;
+.post-container {
+    display: flex;
+    flex-direction: column;
+    width: 610px;
+    margin: 20px 0px 20px 20px;
 }
 
-.post-container {
-    margin: 20px 0px 20px 20px;
-    width: 610px;
+.post-wrapper {
     display: flex;
     flex-direction: column;
     border: 2px solid lightgrey;
-  }
+    margin-bottom: 15px;
+}
 
- .comment-rows {
-     border-bottom: 1px solid lightgrey;
-     margin-right: 
- }
+.post-header {
+    display: flex;
+    flex-direction: column;
+}
 
- .add-comment input {
-     border: none;    
-    padding: 15px 0;
-    font-size: 1rem;
- }
+.post-user {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.post-user h4 {
+    margin: 20px 0;
+}
+
+.img-thumb {
+  border-radius: 75px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.like-container {
+    padding: 10px 20px;
+}
+
+.comment-icon {
+    padding-right: 10px;
+}
+

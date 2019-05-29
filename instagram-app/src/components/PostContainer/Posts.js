@@ -1,35 +1,30 @@
-import React from 'react';
+import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
-import PostHeader from './PostHeader';
-import LikeContainer from './LikeContainer';
+import PostHeader from "./PostHeader";
+import LikeContainer from "./LikeContainer";
+import "./PostContainer.css";
 
 class Posts extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            likes: props.posts.likes
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: props.post.likes
+    };
+  }
 
-
-    render() {
-        return (
-            <div className="post-wrapper">
-                <PostHeader 
-                thumbnailUrl={props.posts.thumbnailUrl}
-                username={props.posts.username}
-                imageUrl={props.posts.imageUrl}
-                />
-                <LikeContainer likes={this.state.likes} />
-                <CommentSection comments={props.posts.comments} />
-            </div>
-
-        );
-    }
-
-
-
+  render() {
+    return (
+      <div className="post-wrapper">
+        <PostHeader
+          thumbnailUrl={this.props.post.thumbnailUrl}
+          username={this.props.post.username}
+          imageUrl={this.props.post.imageUrl}
+        />
+        <LikeContainer likes={this.state.likes} />
+        <CommentSection comments={this.props.post.comments} />
+      </div>
+    );
+  }
 }
 
 export default Posts;
-
