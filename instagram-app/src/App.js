@@ -24,10 +24,8 @@ class App extends React.Component {
       <div className="App">
         <div className="insta-app">
           <SearchBar />
-          {this.state.posts.map(posts => (
-            <PostContainer key={posts.id} posts={posts} />
-          ))}
-        </div>
+          <PostContainer posts={this.state.posts} />
+          </div>
       </div>
     );
   }
