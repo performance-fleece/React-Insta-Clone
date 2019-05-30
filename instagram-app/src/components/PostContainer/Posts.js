@@ -8,9 +8,29 @@ class Posts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: props.post.likes
+      likes: props.post.likes,
+      isLiked: false 
     };
   }
+
+  addLikes = () => {
+    if(!this.state.updated) {
+      this.setState((prevState, props) => {
+        return {
+          likes: prevState.likes + 1,
+          updated: true
+        };
+      });
+    } else {
+      this.setState((prevState, props) => {
+        return {
+          likes: prevState.likes - 1,
+          updated: false
+        };
+      });
+    }
+  };
+
 
   render() {
     return (
@@ -20,7 +40,7 @@ class Posts extends React.Component {
           username={this.props.post.username}
           imageUrl={this.props.post.imageUrl}
         />
-        <LikeContainer likes={this.state.likes} />
+        <LikeContainer addLikes={this.addLikes} likes={this.state.likes} />
         <CommentSection comments={this.props.post.comments} />
       </div>
     );

@@ -7,7 +7,7 @@ const PostContainer = props => {
   return (
     <div className="post-container">
       {props.posts.map(post => 
-        <Posts key={props.posts.id} post={post} />
+        <Posts key={props.posts.imageUrl} post={post} />
         )}
       
     </div>

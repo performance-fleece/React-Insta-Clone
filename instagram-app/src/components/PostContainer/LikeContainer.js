@@ -8,7 +8,7 @@ const LikeContainer = props => {
         <div className="like-container">
             <div className="icon-container">
                 <img className="comment-icon" alt="" src={commentIcon} />
-                <img className="comment-icon" alt="" src={likeIcon} />  
+                <img onClick={props.addLikes} className="comment-icon" alt="" src={likeIcon} />  
             </div>
             <div className="comment-likes">{props.likes} likes</div>
             
