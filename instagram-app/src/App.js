@@ -14,18 +14,22 @@ class App extends React.Component {
     // console.log(this.state.posts)
   }
 
-  componentDidMount () {
+  componentDidMount() {
     console.log(dummyData);
     this.setState({ posts: dummyData });
   }
+
+  changeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
 
   render() {
     return (
       <div className="App">
         <div className="insta-app">
-          <SearchBar />
+          <SearchBar changeHandler={this.changeHandler} />
           <PostContainer posts={this.state.posts} />
-          </div>
+        </div>
       </div>
     );
   }
