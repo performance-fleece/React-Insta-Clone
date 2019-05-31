@@ -15,12 +15,15 @@ const SearchBar = props => {
              />
         </div>
         <div className="search-bar">
-          <form name="searchForm" onSubmit={props.searchHandler}>
+          <form name="searchForm">
             <input 
             type="text" 
+            name="searchString"
             value={props.searchString} 
             placeholder="Search" 
-            onChange={props.changeHandler} />
+            onChange={props.changeHandler}
+            onSubmit={props.testHandler}
+             />
           </form>
         </div>
         <div className="icon-bar">
