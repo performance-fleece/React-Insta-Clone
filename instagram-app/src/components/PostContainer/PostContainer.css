@@ -1,13 +1,15 @@
 .post-container {
     display: flex;
     flex-direction: column;
-    width: 610px;
-    margin: 20px 0px 20px 20px;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;    
 }
 
 .post-wrapper {
     display: flex;
     flex-direction: column;
+    width: 35%;
     border: 2px solid lightgrey;
     margin-bottom: 15px;
 }
