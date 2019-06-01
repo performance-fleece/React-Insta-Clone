@@ -11,12 +11,13 @@ const SearchBar = props => {
       <div className="logo-left">
         <img alt="logo" src={logo} />
       </div>
-      <div className="search-bar" >
-        <form >
+      <div className="search-bar">
+        <form>
           <input
             type="text"
             placeholder="Search"
-            onKeyDown={props.changeHandler}
+            onKeyDown={props.searchHandler}
+            onSubmit={props.stopSubmit}
           />
         </form>
       </div>
