@@ -1,39 +1,57 @@
-import React from 'react';
-import './App.css';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar';
-
+import React from "react";
+import "./App.css";
+import dummyData from "./dummy-data";
+import PostContainer from "./components/PostContainer/PostContainer";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      filteredPosts: []
     };
-    // console.log(this.state.posts)
   }
 
   componentDidMount() {
-    console.log(dummyData);
-    this.setState({ posts: dummyData });
+    this.setState({ posts: dummyData })
   }
 
+
   changeHandler = event => {
-    this.setState({ [event.target.name]: event.target.value });
+    // eslint-disable-next-line array-callback-return
+    const posts = this.state.posts.filter(post => {
+      if(post.username.includes(event.target.value)) {
+        return post;
+      }
+    });
+    this.setState({ filteredPosts: posts });
   };
 
+
+
+
+
   render() {
+
+
     return (
       <div className="App">
         <div className="insta-app">
-          <SearchBar changeHandler={this.changeHandler} />
-          <PostContainer posts={this.state.posts} />
+          <SearchBar
+            searchTerm={this.state.searchTerm}
+            changeHandler={this.changeHandler}
+          />
+          <PostContainer
+            posts={this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.posts   
+            }
+          />
         </div>
       </div>
     );
   }
 }
-
 
 export default App;
