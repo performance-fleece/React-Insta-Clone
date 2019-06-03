@@ -1,5 +1,6 @@
 import React from "react";
 import PostHeader from './PostHeader';
+import LikeContainer from './LikeContainer';
 
 const Posts = props => {
   return (
@@ -9,6 +10,8 @@ const Posts = props => {
         thumbnailUrl={props.post.thumbnailUrl}
       />
       <img className="image-url" alt="" src={props.post.imageUrl} />
+      <LikeContainer likes={props.post.likes} />
+
     </div>
   );
 };
