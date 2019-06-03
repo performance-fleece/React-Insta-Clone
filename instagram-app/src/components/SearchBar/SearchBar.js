@@ -1,9 +1,9 @@
 import React from 'react';
 import './SearchBar.css';
 import iglogo from '../assets/ig_search_bar_logo.png';
-import compass from './assets/compass.png';
-import heart from './assets/heart.png';
-import user from './assets/user.png';
+import compass from '../assets/compass.png';
+import heart from '../assets/heart.png';
+import user from '../assets/user.png';
 import { Form, Input } from 'reactstrap';
 
 const SearchBar = props => {
@@ -15,10 +15,10 @@ const SearchBar = props => {
         <div className="search-form">
           <Form>
             <Input
-              type="search"
+              type="text"
               name="search"
               id="searchText"
-              placeholder="search"
+              placeholder="Search"
             />
           </Form>
         </div>

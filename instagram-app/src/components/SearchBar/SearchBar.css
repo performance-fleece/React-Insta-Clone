@@ -1,1 +1,40 @@
 
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 5px 0;
+}
+
+.ig-logo {
+    width: 17.7rem;
+}
+
+.socials-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 14.9rem;
+    padding: 0 33px;
+    align-items: center;
+}
+
+.socials-wrapper img {
+   height: 28px;
+   
+}
+
+
+.search-form {
+    width: 22%;
+    margin-right: 3.5em;
+}
+
+.search-form input {
+    text-align: center;
+    line-height: 1;
+    height: 30px;
+    font-size: .9rem;
+}
+
