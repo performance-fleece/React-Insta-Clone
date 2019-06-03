@@ -1,0 +1,14 @@
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 15px;
+    font-size: 12pt;
+    text-align: left;
+}
+
+.comment-name {
+    font-weight: bold;
+    padding-right: 5px;
+}

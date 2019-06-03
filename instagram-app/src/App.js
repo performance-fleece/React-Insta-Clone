@@ -17,8 +17,6 @@ class App extends React.Component {
       <div className="App">
         <SearchBar />
         <PostContainer posts={this.state.posts} />
-        {/* <SearchBar />
-        <PostContainer /> */}
       </div>
     
     );
