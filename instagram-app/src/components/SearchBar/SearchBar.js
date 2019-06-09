@@ -16,9 +16,9 @@ const SearchBar = props => {
           <Form>
             <Input
               type="text"
-              name="search"
-              id="searchText"
               placeholder="Search"
+              onKeyUp={props.searchPosts}
+              onChange={props.changeHandler}
             />
           </Form>
         </div>

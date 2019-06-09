@@ -12,7 +12,10 @@ const Posts = props => {
       />
       <img className="image-url" alt="" src={props.post.imageUrl} />
       <LikeContainer likes={props.post.likes} />
-      <CommentSection comments={props.post.comments} />
+      <CommentSection 
+        comments={props.post.comments}
+        timestamp={props.post.timestamp}
+        />
     
     </div>
   );
