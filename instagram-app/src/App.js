@@ -10,12 +10,13 @@ class App extends React.Component {
     this.state = {
       posts: [],
       filteredPosts: [],
+      addComment: '',
       search: ""
     };
   }
 
   changeHandler = event => {
-    this.setState({ search: event.target.value });
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   componentDidMount() {
@@ -28,9 +29,25 @@ class App extends React.Component {
         return post;
       }
     });
-    this.setState({ 
+    this.setState({
       filteredPosts: filtered
-     });
+    });
+  };
+
+  addComment = event => {
+    event.preventDefault();
+    if (this.state.comment === "") {
+      console.log("empty comment");
+    } else {
+      const newComment = {
+        id: Date.now(),
+        username: "Test User",
+        text: this.state.comment
+      };
+      const comments = this.state.comments.slice();
+      comments.push(newComment);
+      this.setState({ comments, comment: "" });
+    }
   };
 
   render() {

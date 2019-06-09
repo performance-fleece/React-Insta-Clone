@@ -7,7 +7,7 @@ const CommentInput = props => {
             <Form>
                 <Input
                 type="text"
-                name="comment-text"
+                name="addComment"
                 username="defaultUser"
                 placeholder="Add a comment..."
                 />

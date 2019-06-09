@@ -15,6 +15,7 @@ const SearchBar = props => {
         <div className="search-form">
           <Form>
             <Input
+              name="search"
               type="text"
               placeholder="Search"
               onKeyUp={props.searchPosts}
